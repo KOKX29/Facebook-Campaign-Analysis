@@ -89,3 +89,15 @@ end
 ```sql
 Select distinct xyz_campaign_id from FacebookCampaign
 ```
+
+**Total Purchase per Campaign**
+
+```sql
+select xyz_campaign_id,sum(Approved_Conversion) as TotalApprovedConversion
+from FacebookCampaign
+group by xyz_campaign_id
+order by TotalApprovedConversion desc
+```
+
+
+![image](https://user-images.githubusercontent.com/130441998/236924113-b6adeea5-55d4-4925-bf9d-252aae0180e9.png)
